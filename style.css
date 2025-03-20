@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #fff;
+}
+
+.calculator {
+    background-color: black;
+    height: 70vh;
+    width: 60vw;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#display {
+    background-color: rgb(46, 43, 43);
+    width: 100%;
+    text-align: right;
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Common Button Styles */
+button {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Grid Layout for Buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Number Buttons */
+.btn {
+    background-color: rgb(26, 26, 26);
+}
+
+.btn:hover {
+    background-color: rgba(26, 26, 26, 0.8);
+}
+
+/* Operator Buttons */
+.op {
+    background-color: rgb(255, 149, 0);
+}
+
+.op:hover {
+    background-color: rgba(255, 149, 0, 0.8);
+}
+
+/* Equal Button */
+.eq {
+    background-color: rgb(10, 180, 47);
+}
+
+.eq:hover {
+    background-color: rgba(10, 180, 47, 0.8);
+}
+
+/* Clear Button */
+#clear {
+    background-color: rgb(255, 0, 0);
+}
+
+#clear:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .calculator {
+        width: 90vw;
+        height: auto;
+    }
+
+    button {
+        font-size: 25px;
+        padding: 15px;
+    }
+}
